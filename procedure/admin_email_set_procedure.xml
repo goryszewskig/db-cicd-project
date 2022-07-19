@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="71efb5bf676e8127f581fab984d57acdb7c229ea" author="(DEMO)-Generated" failOnError="false"    >
+		<n0:createOracleProcedure objectName="ADMIN_EMAIL_SET" objectType="PROCEDURE" ownerName="DEMO"   >
+			<n0:source><![CDATA[
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "DEMO"."ADMIN_EMAIL_SET" 
+IS
+BEGIN
+        update trees
+           set submitter_email = 'jeff@thatjeff.com'
+        where submitter_email is null;
+
+end admin_email_set;
+]]></n0:source>
+		</n0:createOracleProcedure>
+	</changeSet>
+</databaseChangeLog>
