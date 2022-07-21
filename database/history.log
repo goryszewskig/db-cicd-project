@@ -1,0 +1,12 @@
+93ef0a78-49f9-4046-bbfe-d0bfb229cbfc:1658381573084:0:S:set cloudconfig /home/khadayate/Wallet_ADB.zip
+3c50edce-9f4a-4e6f-97b2-356e6b0bd4d1:1658381586360:0:F:drop user demo cascade;
+2f553a08-14b1-40ed-af98-215c8486dcc8:1658381598713:0:S:conn admin@ADB_high
+986efb71-7e9d-4b71-a28c-6952faacbd38:1658381645264:0:F:create user demo identified by **************** quota unlimited on data;
+57ef9190-3646-4f24-9a4f-c0f20fbb293b:1658381657972:1404:S:drop user demo cascade;
+88210536-1df4-40ed-babb-74a160e41120:1658381662479:373:S:create user demo identified by **************** quota unlimited on data;
+3b048950-2f0c-4f01-8450-8fee9cacf86a:1658381681156:26:S:grant connect, resource to demo;
+1e860d83-d668-4e34-a184-19994282a07d:1658381707571:0:S:conn demo@ADB_high
+be5ddabc-80d8-457d-9e3e-959d947349a6:1658381757337:0:S:@../demo_scripts/create_table.sql
+b66aedd9-767d-4ddb-be46-d1df8c1673d0:1658381773341:0:S:@../demo_scripts/insert_data.sql
+837087b2-7a24-422c-b3c5-a509b57b65e6:1658381797021:0:S:@../demo_scripts/create_logic.sql
+48d6607d-44dc-49b3-9472-c0eb9b8d1102:1658381904895:0:S:lb genschema -split -sql
