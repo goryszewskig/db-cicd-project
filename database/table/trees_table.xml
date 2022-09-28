@@ -5,7 +5,7 @@
 	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
 	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
-	<changeSet id="32e8e59b04f6d30f929080102f8999a76a77ebf0" author="(DEMO)-Generated" failOnError="false"    >
+	<changeSet id="4371728539f9e884ee93d525e249d35ffb5af05d" author="(DEMO)-Generated" failOnError="false"    >
 		<n0:createSxmlObject objectName="TREES" objectType="TABLE" ownerName="DEMO"   >
 			<n0:source><![CDATA[
   <TABLE xmlns="http://xmlns.oracle.com/ku" version="1.0">
@@ -70,6 +70,10 @@
             <DATATYPE>TIMESTAMP</DATATYPE>
             <SCALE>6</SCALE>
          </COL_LIST_ITEM>
+         <COL_LIST_ITEM>
+            <NAME>TREE_PICTURE</NAME>
+            <DATATYPE>BLOB</DATATYPE>
+         </COL_LIST_ITEM>
       </COL_LIST>
       <DEFAULT_COLLATION>USING_NLS_COMP</DEFAULT_COLLATION>
       <PHYSICAL_PROPERTIES>
@@ -98,6 +102,37 @@
             <COMPRESS>N</COMPRESS>
          </HEAP_TABLE>
       </PHYSICAL_PROPERTIES>
+      <TABLE_PROPERTIES>
+         <COLUMN_PROPERTIES>
+            <COL_LIST>
+               <COL_LIST_ITEM>
+                  <NAME>TREE_PICTURE</NAME>
+                  <DATATYPE>BLOB</DATATYPE>
+                  <LOB_PROPERTIES>
+                     <STORAGE_TABLE>
+                        <TABLESPACE>DATA</TABLESPACE>
+                        <SECUREFILE></SECUREFILE>
+                        <STORAGE_IN_ROW></STORAGE_IN_ROW>
+                        <STORAGE>
+                           <INITIAL>106496</INITIAL>
+                           <NEXT>1048576</NEXT>
+                           <MINEXTENTS>1</MINEXTENTS>
+                           <MAXEXTENTS>2147483645</MAXEXTENTS>
+                           <PCTINCREASE>0</PCTINCREASE>
+                           <BUFFER_POOL>DEFAULT</BUFFER_POOL>
+                           <FLASH_CACHE>DEFAULT</FLASH_CACHE>
+                           <CELL_FLASH_CACHE>DEFAULT</CELL_FLASH_CACHE>
+                        </STORAGE>
+                        <CHUNK>8192</CHUNK>
+                        <CACHE>N</CACHE>
+                        <LOGGING>Y</LOGGING>
+                        <VALIDATE>N</VALIDATE>
+                     </STORAGE_TABLE>
+                  </LOB_PROPERTIES>
+               </COL_LIST_ITEM>
+            </COL_LIST>
+         </COLUMN_PROPERTIES>
+      </TABLE_PROPERTIES>
    </RELATIONAL_TABLE>
 </TABLE>]]></n0:source>
 		</n0:createSxmlObject>
